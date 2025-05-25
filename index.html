@@ -3,12 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Instegrem</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Inztagram</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #fafafa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background: white;
+      padding: 2rem;
+      border: 1px solid #ccc;
+      text-align: center;
+      width: 300px;
+      box-shadow: 0 0 10px #ccc;
+    }
+    .title {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #262626;
+    }
+    input {
+      display: block;
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+    button {
+      width: 100%;
+      padding: 0.5rem;
+      background: #3897f0;
+      color: white;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .note {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #00376b;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
-    <img src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png" alt="Instagram Logo" />
+    <div class="title">Inztagram</div>
     <form id="login-form">
       <input type="text" id="username" placeholder="Phone number, username, or email" required />
       <input type="password" id="password" placeholder="Password" required />
@@ -16,6 +60,11 @@
     </form>
     <p class="note">Forgot password?</p>
   </div>
-  <script src="script.js"></script>
+  <script>
+    document.getElementById("login-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Access denied: Your vibes are not verified!");
+    });
+  </script>
 </body>
 </html>
